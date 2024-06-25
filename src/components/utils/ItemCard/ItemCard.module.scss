@@ -1,0 +1,39 @@
+@import '../../../colors/colors.scss';
+
+.item_card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease ;
+
+  &:hover {
+    transform: translateY(-2px);
+    scale: 1.035;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__details {
+    padding: 1rem;
+    background-color: $color-lgray;
+    border-top: 1px solid $color-background;
+
+    &__name {
+      font-size: 1.25rem;
+      color: $color-lgray;
+      margin: 0.5rem 0;
+    }
+
+    &__price {
+      font-size: 1rem;
+      color: $color-aqua;
+      margin: 6rem ;
+    }
+  }
+}

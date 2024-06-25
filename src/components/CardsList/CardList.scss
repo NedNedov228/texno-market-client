@@ -1,0 +1,64 @@
+
+
+@import '../../colors/colors.scss';
+
+.card-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card-list.animate {
+  animation: fadeIn 0.5s ease-in-out; /* Add animation to the grid */
+  transform: all 2s ease-in-out; 
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+
+  button {
+    background-color: $color-dgray;
+    color: $color-background;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:disabled {
+      background-color: $color-lgray;
+      cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: $color-aqua;
+    }
+  }
+
+  span {
+    margin: 0 1rem;
+    color: $color-brown-dark;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,11 @@
+
+main {
+  
+}
+
+.container {
+  padding-top: 100px !important; /* Adjust this value based on the header height + some extra space */
+  max-width: 1200px;
+  margin: 0 auto !important ; 
+  padding: 0 2rem 0;
+}

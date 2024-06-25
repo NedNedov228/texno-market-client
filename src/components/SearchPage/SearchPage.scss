@@ -1,0 +1,46 @@
+@import '../../colors/colors.scss';
+
+.search-page {
+  display: flex;
+
+  .filter-bar {
+    width: 250px;
+    padding: 1rem;
+    background: $color-background;
+    border-right: 1px solid $color-pink-light;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 80px); // Subtract header height
+    position: sticky;
+    top: 80px; // Align with header height
+    overflow-y: auto;
+
+    h2 {
+      margin-bottom: 1rem;
+      color: $color-brown-dark;
+    }
+
+    .filter-group {
+      margin-bottom: 1rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: $color-brown-dark;
+      }
+
+      input[type='range'] {
+        width: 100%;
+      }
+
+      input[type='checkbox'] {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .results {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+}

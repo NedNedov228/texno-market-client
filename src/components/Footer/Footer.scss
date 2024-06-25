@@ -1,0 +1,96 @@
+@import '../../colors/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+
+footer{
+    margin-top: 5rem !important;
+}
+$footerBg: $color-black;
+$footerText: $color-lgray;
+// .container{
+//   width: 100%;
+//   max-width: 1600px;
+//   margin: 0 auto;
+// }
+
+.footer{
+  position:relative;
+  margin-top: 3rem;
+  padding: 3rem 0;  
+  color: $footerText;
+  background : $footerBg;
+  margin-top: auto;
+
+  &__container{
+    padding-top: 10px !important;
+    max-width: 1200px;
+    margin: 0 auto !important;
+    padding: 0 2rem 0;
+  }
+  &__payment{
+    margin-top: 3rem;
+  }
+  &__columns{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  &__col{
+    &-title{
+      color: $color-aqua;
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      display: flex;
+      align-items:center;
+      * ~ span{
+        margin-left: 1rem;
+      }
+    }
+  }
+  a{
+      display: flex;
+      align-items:center;
+    color: $footerText;
+    text-decoration: none;    
+      * ~ span{
+        margin-left: 1rem;
+      }
+  }
+  &__nav{
+    &-list{
+      display:flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    &-item{
+      cursor: pointer;
+      transition: color 0.3s ease;
+      list-style: none;
+      
+    }
+    &-payments{
+      display:flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+  }
+  &__copyrights{
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba($footerText, 0.2);
+    p{
+      display:flex;
+      a{
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  
+}
+
+
+a:hover{
+  color: $color-azure;
+}

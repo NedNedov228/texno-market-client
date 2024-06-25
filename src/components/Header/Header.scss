@@ -1,0 +1,84 @@
+@import '../../colors/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+    padding: 1rem 2rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    height: 80px;
+    color: $color-aqua;
+    font-family: 'Rubik', sans-serif;
+    /* Fixed height for the header */
+
+    &--scrolled {
+        background: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(90px);
+        -webkit-backdrop-filter: blur(60px);
+        .navbar__logo a {
+            color: $color-brown-dark;
+            font-size: 1.5rem;
+        }
+        .navbar a {
+            color: $color-aqua;
+        }
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+
+    &__logo {
+        a {
+            color: $color-background;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            &:hover {
+                color: $color-azure;
+            }
+        }
+    }
+
+    &__links {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            margin-left: 2rem;
+
+            .navbar__link {
+                text-decoration: none;
+                font-size: 1rem;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $color-azure;
+                }
+            }
+        }
+    }
+}
+
+/* Ensure a elements inside navbar have no default styles */
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    margin-left: 2rem;
+
+}

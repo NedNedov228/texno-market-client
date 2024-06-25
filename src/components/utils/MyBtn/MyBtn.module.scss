@@ -1,0 +1,29 @@
+@import '../../../colors/colors.scss';
+
+.button{
+    border-radius: 8px;
+    border: 0px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: $color-azure;
+    cursor: pointer;
+    transition: all ease 0.12s;
+    transition: background-color 0.3s;
+    color: $color-dgray ;
+    
+    
+    &:hover {
+        background-color: $color-aqua;
+        color: $color-lgray;
+    }
+    &:active
+    {
+        transform: translateY(2px);
+        scale: 0.95;
+        //inner shadow
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+}
+

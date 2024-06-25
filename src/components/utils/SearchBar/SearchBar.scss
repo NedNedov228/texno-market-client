@@ -1,0 +1,29 @@
+@import '../../../colors/colors.scss';
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  input {
+    padding: 0.45rem;
+    border: 1px solid $color-aqua;
+    border-radius: 4px 0 0 4px;
+    flex: 1;
+    &:focus {
+      outline: none;
+      border-color: $color-azure;
+    }
+  }
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: $color-aqua;
+    color: $color-dgray;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $color-azure;
+
+    }
+  }
+}
